@@ -8,5 +8,5 @@ ReactDOM.render(
   <React.StrictMode>
     <ProductList />
   </React.StrictMode>,
-  document.getElementById('root')
-)
+  document.getElementById('root'),
+);
