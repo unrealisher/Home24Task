@@ -17,10 +17,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "lint:eslint": "eslint --ext .ts,.tsx ./src",
+    "lint:stylelint": "stylelint \"**/*.css\"",
+    "lint": "npm run lint:eslint || npm run lint:stylelint",
+    "lint:fix": "npm run lint:eslint -- --fix && npm run lint:stylelint -- --fix"
   },
   "browserslist": {
     "production": [
@@ -38,6 +39,27 @@
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.54",
     "@types/react": "^16.9.46",
-    "@types/react-dom": "^16.9.8"
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^4.3.8",
+    "lint-staged": "^12.3.6",
+    "stylelint": "^14.6.0",
+    "stylelint-config-standard": "^25.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint"
+    ],
+    "*.css": [
+      "stylelint"
+    ]
   }
 }
