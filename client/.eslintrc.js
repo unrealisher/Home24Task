@@ -25,6 +25,8 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-        "indent": ["error", 4]
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "react/display-name": "off",
+        "no-lone-blocks": "off"
     }
 };

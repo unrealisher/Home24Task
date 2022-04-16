@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the ProductCard 1`] = `
+<div
+  className="productCard"
+>
+  <img
+    src="https://via.placeholder.com/200.png?text=Polsterstuhl Aledas II"
+  />
+  <div>
+    Polsterstuhl Aledas II
+  </div>
+  <div>
+    299,99 €
+  </div>
+  <button
+    className="button"
+  >
+    Add to cart
+  </button>
+</div>
+`;
