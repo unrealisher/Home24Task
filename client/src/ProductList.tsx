@@ -22,7 +22,7 @@ export var ArticleCard = ({ article }: { article: Article }) => {
       <div>{formatter.format(article.prices.regular.value / 100)}</div>
       <section role="button">Add to cart</section>
     </div>
-  )
+  );
 };
 
 class ArticleList extends React.Component {
@@ -75,7 +75,7 @@ class ArticleList extends React.Component {
 
         this.setState({ categories: response.data.categories });
       }
-    }
+    };
   }
 
   render() {
